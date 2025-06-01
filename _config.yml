@@ -22,7 +22,7 @@ repository               : "tawsifturjo/tawsifturjo.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "tur0.jpg.jpg"
+  avatar           : "tawhif.jpeg"
   name             : "Mohammed Tawshif Hossain"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
@@ -41,6 +41,7 @@ author:
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
  # researchgate     : # URL
   #scopus           : # URL
+  linkedin           : 'www.linkedin.com/in/mohammed-tawshif-hossain'
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
