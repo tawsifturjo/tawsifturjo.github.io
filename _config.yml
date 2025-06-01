@@ -41,7 +41,7 @@ author:
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
  # researchgate     : # URL
   #scopus           : # URL
-  linkedin           : 'www.linkedin.com/in/mohammed-tawshif-hossain'
+  linkedin           : "https://www.linkedin.com/in/mohammed-tawshif-hossain"
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
@@ -62,7 +62,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "Mohammed Tawshif Hossain"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
