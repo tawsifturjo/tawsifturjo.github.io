@@ -1,11 +1,32 @@
 ---
-title: "Paper Title Number 1"
+title: "Spectrogram-driven Emotion Detection from Electroencephalogram"
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
+excerpt: 'Emotion detection aims to interpret
+emotions through data like text, voice, and
+physiological signals, which holds significant potential
+for monitoring mental health and human-computer
+interaction. Electroencephalogram (EEG) is a noninvasive technique recording brain activity and offers
+unique insights for real-time emotion detection. This
+study evaluates classifying emotions (i.e. positive,
+negative, neutral) in EEG using deep learning,
+emphasizing Convolutional Neural Networks (CNN).
+After going through the preprocessing part, the timefrequency representations along with random
+transformations were created as inputs to the CNN
+architecture by a short-time Fourier transform of the
+EEG signals from the SEED dataset. The spectrograms
+have been processed to have better outcomes, and they
+showed an overall accuracy of 99.80% in detecting the
+emotions classes. Also, processed spectrograms, along
+with the actual spectrograms, have been fed together to
+the CNN model as a hypothesis, and there we achieved
+an overall accuracy of 66%, depicting that the usage of
+processed spectrograms can be a potential field of study
+to recognize emotions from EEG signals.
+'
+
+
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
