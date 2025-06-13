@@ -50,7 +50,7 @@ redirect_from:
     <a class="project-link" href="https://example.com/peers-eeg-recall-paper" target="_blank">🔗 Read the Paper</a>
   </div>
   <div class="project-image">
-    <img src="/assets/images/project1-eeg.jpg" alt="EEG Memory Recall Research">
+    <img src="images/site-logo.png" alt="EEG Memory Recall Research">
   </div>
 </div>
 
