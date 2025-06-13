@@ -27,6 +27,7 @@ to recognize emotions from EEG signals.
 '
 
 
-slidesurl: 'ECCE_611_Final[1].pptx'
+
+slidesurl: 'https://github.com/tawsifturjo/tawsifturjo.github.io/blob/master/files/ECCE_611_Final%5B1%5D.pdf'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
