@@ -8,43 +8,81 @@ redirect_from:
 ---
 
 <style>
-  .research-container {
+  .project-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 3em;
     gap: 20px;
     flex-wrap: wrap;
   }
-  .research-text {
+  .project-text {
     flex: 1 1 55%;
   }
-  .research-image {
+  .project-image {
     flex: 1 1 35%;
-    max-width: 300px;
+    max-width: 320px;
   }
-  .research-image img {
+  .project-image img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .project-link {
+    margin-top: 1em;
+    display: inline-block;
+    font-weight: bold;
+    color: #007acc;
   }
 </style>
 
-<div class="research-container">
-  <div class="research-text">
-    <h2>Research Experience</h2>
-    <p>
-      I am currently pursuing my Bachelor of Science in Electrical and Electronic Engineering at Chittagong University of Engineering and Technology (CUET). My academic and research interests lie in the intersection of <strong>machine learning, deep learning, EEG signal processing</strong>, and <strong>quantum information science</strong>.
-    </p>
+## 🧠 Research Experience
 
-    <p>
-      I have worked extensively on EEG-based cognitive state classification, focusing on memory encoding and retrieval using time-series deep learning models like LSTM and GRU. My work includes the design of hybrid models combining LSTM with traditional ML classifiers (e.g., XGBoost) for improved performance and interpretability. I also explored spectrogram-based approaches for visual feature extraction and classification using CNNs.
-    </p>
+---
 
+### 1. EEG-Based Memory Recall Detection Using LSTM and Spectrogram-CNN Models
+
+<div class="project-container">
+  <div class="project-text">
     <p>
-      Recently, I’ve extended my interests to <strong>physics-informed machine learning and quantum computing</strong>, particularly in areas like quantum sensing and near-term quantum algorithms. I’m currently preparing a research publication on EEG-based memory recall modeling using the PEERS dataset from the University of Pennsylvania.
+      This project focuses on detecting memory recall in human subjects using EEG signals. I processed the PEERS dataset (University of Pennsylvania) to classify successfully recalled versus forgotten words. Time-domain LSTM models and frequency-domain CNNs (on spectrograms) were trained and compared. This approach showed promise for cognitive neuroscience applications, including brain-computer interfaces and early diagnosis of memory-related disorders.
     </p>
+    <a class="project-link" href="https://example.com/peers-eeg-recall-paper" target="_blank">🔗 Read the Paper</a>
   </div>
-
-  <div class="research-image">
-    <img src="images/bio-photo-2.jpg" alt="Research Image">
+  <div class="project-image">
+    <img src="/assets/images/project1-eeg.jpg" alt="EEG Memory Recall Research">
   </div>
 </div>
+
+---
+
+### 2. Quantum-Inspired Optimization Techniques for EEG Signal Denoising
+
+<div class="project-container">
+  <div class="project-text">
+    <p>
+      In this study, I applied quantum-inspired metaheuristics to optimize EEG signal denoising using FIR filters. The method preserved critical neural patterns while reducing artifact-induced noise. Techniques from compressed sensing and non-convex optimization were combined with domain knowledge in neurophysiology. This research bridges classical signal processing with principles from quantum computing and optimization.
+    </p>
+    <a class="project-link" href="https://example.com/quantum-eeg-denoising" target="_blank">🔗 Read the Paper</a>
+  </div>
+  <div class="project-image">
+    <img src="/assets/images/project2-quantum.jpg" alt="Quantum Optimization in EEG">
+  </div>
+</div>
+
+---
+
+### 3. Spectrogram-Based Classification of Alcohol Consumption Effects on EEG
+
+<div class="project-container">
+  <div class="project-text">
+    <p>
+      This research explored how alcohol consumption affects brain activity using spectrograms generated from multichannel EEG recordings. A CNN-based model was trained on time-frequency features to classify alcoholic vs non-alcoholic subjects. The work also analyzed localized effects on frontal and parietal lobes, demonstrating the potential for machine learning to support substance impact studies in neuroscience.
+    </p>
+    <a class="project-link" href="https://example.com/alcohol-eeg-spectrogram" target="_blank">🔗 Read the Paper</a>
+  </div>
+  <div class="project-image">
+    <img src="/assets/images/project3-alcohol.jpg" alt="Alcohol Effect EEG Research">
+  </div>
+</div>
+
