@@ -26,7 +26,8 @@ processed spectrograms can be a potential field of study
 to recognize emotions from EEG signals'
 #date: 2010-10-01
  #venue: 'Journal 1'
-slidesurl: 'https://github.com/tawsifturjo/tawsifturjo.github.io/blob/master/files/ECCE_611_Final%5B1%5D.pdf'
+slidesurl: 'files/ECCE_611_Final[1].pdf'
+
 paperurl: 'http://academicpages.github.io/files/paper2.pdf'
 citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
