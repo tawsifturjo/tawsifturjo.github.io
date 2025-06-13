@@ -45,6 +45,6 @@ redirect_from:
   </div>
 
   <div class="research-image">
-    <img src="/assets/images/research.jpg" alt="Research Image">
+    <img src="images/bio-photo-2.jpg" alt="Research Image">
   </div>
 </div>
