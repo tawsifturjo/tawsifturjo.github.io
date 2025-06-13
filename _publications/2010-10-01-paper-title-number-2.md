@@ -24,13 +24,6 @@ the CNN model as a hypothesis, and there we achieved
 an overall accuracy of 66%, depicting that the usage of
 processed spectrograms can be a potential field of study
 to recognize emotions from EEG signals'
-#date: 2010-10-01
- #venue: 'Journal 1'
-slidesurl: 'https://github.com/tawsifturjo/tawsifturjo.github.io/blob/b11769e9f25f3de5a061c9d0c90c6090b9b4c1f8/files/ECCE_611_Final%5B1%5D.pdf'
 
-
-paperurl: 'http://academicpages.github.io/files/paper2.pd'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
----
 
 
