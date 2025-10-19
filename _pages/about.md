@@ -383,9 +383,16 @@ permalink: /
       Passionate about biomedical signal processing, quantum photonics, and computational neuroscience. 
       Exploring the intersection of technology and healthcare to innovate tomorrow's solutions.
     </div>
+
+    <div class="social-links"> 
+    <a href="mailto:tawsifturjoeee@gmail.com" class="social-link" title="Email">📧</a> 
+    <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" title="LinkedIn">💼</a>
+    <a href="https://github.com/tawsifturjo" class="social-link" target="_blank" title="GitHub">💻</a> 
+    <a href="https://scholar.google.com" class="social-link" target="_blank" title="Google Scholar">🎓</a> 
+    </div>
     
     <div class="hero-buttons">
-      <a href="/publications/" class="btn btn-primary">📚 View Publications</a>
+      <a href="/publications/" class="btn btn-secondary">📚 View Publications</a>
       <a href="/cv/" class="btn btn-secondary">📄 Download CV</a>
     </div>
   </div>
@@ -439,32 +446,7 @@ permalink: /
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats-section">
-  <div class="container">
-    <div class="grid grid-4">
-      <div class="stat-card">
-        <div class="stat-number">2</div>
-        <div class="stat-label">Published Papers</div>
-      </div>
-      
-      <div class="stat-card">
-        <div class="stat-number">3.51</div>
-        <div class="stat-label">CGPA / 4.00</div>
-      </div>
-      
-      <div class="stat-card">
-        <div class="stat-number">5+</div>
-        <div class="stat-label">Research Projects</div>
-      </div>
-      
-      <div class="stat-card">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">EEG Sessions Analyzed</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- FEATURED WORK -->
 <section>
