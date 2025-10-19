@@ -15,7 +15,7 @@ author_profile: true
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
   }
   
@@ -26,7 +26,7 @@ author_profile: true
   
   .publication-content {
     flex: 1 1 70%;
-    min-width: 300px;
+    min-width: 200px;
   }
   
   .publication-image {
@@ -240,9 +240,7 @@ author_profile: true
       <span class="metric-item">
         📈 <strong>AUC:</strong> 91.62%
       </span>
-      <span class="metric-item">
-        👥 <strong>Participants:</strong> 100
-      </span>
+    
     </div>
   </div>
   
@@ -286,9 +284,7 @@ author_profile: true
       <span class="metric-item">
         🧠 <strong>Dataset:</strong> SEED
       </span>
-      <span class="metric-item">
-        🎯 <strong>Classes:</strong> 3 Emotions
-      </span>
+   
     </div>
   </div>
   
@@ -300,7 +296,7 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div style="text-align: center; margin-top: 3em; padding: 2em; background: #f8f9fa; border-radius: 12px;">
+  <div style="text-align: center; margin-top: 2em; padding: 2em; background: #f8f9fa; border-radius: 12px;">
     <p style="font-size: 1.1em; color: #34495e;">
       For a complete list of publications and citation metrics, please visit my 
       <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer" style="color: #3498db; font-weight: 600;">Google Scholar profile</a>.
