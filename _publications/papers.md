@@ -245,7 +245,7 @@ author_profile: true
   </div>
   
   <div class="publication-image">
-    <img src="/images/memory-encoding-retrieval.png" alt="EEG Memory Encoding and Retrieval Research" loading="lazy">
+    <img src="/images/RAS_Enc.png" alt="EEG Memory Encoding and Retrieval Research" loading="lazy">
   </div>
 </div>
 
