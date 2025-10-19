@@ -371,7 +371,7 @@ permalink: /
     </div>
     
     <div class="hero-buttons">
-      <a href="/publications/" class="btn btn-primary">📚 View Publications</a>
+      <a href="/publications/" class="btn btn-secondary">📚 View Publications</a>
       <a href="/cv/" class="btn btn-secondary">📄 Download CV</a>
     </div>
   </div>
