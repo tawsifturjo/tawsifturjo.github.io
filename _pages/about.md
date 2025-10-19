@@ -153,7 +153,7 @@ redirect_from:
     </div>
   </div>
   <div class="project-image">
-    <img src="images/site-logo.png" alt="EEG Memory Encoding and Retrieval Research">
+    <img src="https://github.com/tawsifturjo/tawsifturjo.github.io/blob/master/images/RAS_Enc.png">
   </div>
 </div>
 
