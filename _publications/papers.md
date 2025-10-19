@@ -244,9 +244,7 @@ author_profile: true
     </div>
   </div>
   
-  <div class="publication-image">
-    <img src="/images/RAS_Enc.png" alt="EEG Memory Encoding and Retrieval Research" loading="lazy">
-  </div>
+
 </div>
 
 <!-- Publication 2: Conference Paper -->
@@ -288,9 +286,7 @@ author_profile: true
     </div>
   </div>
   
-  <div class="publication-image">
-    <img src="/images/emotion-detection-eeg.png" alt="EEG-Based Emotion Detection Research" loading="lazy">
-  </div>
+
 </div>
 
 ---
