@@ -80,6 +80,9 @@ permalink: /
     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
   }
 
+  .social-links 
+  { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; animation: fadeInUp 1.6s ease; } .social-link { width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 1.5rem; transition: all 0.3s ease; backdrop-filter: blur(10px); } .social-link:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
+
   .profile-icon {
     font-size: 4rem;
   }
