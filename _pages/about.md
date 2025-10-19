@@ -153,7 +153,7 @@ redirect_from:
     </div>
   </div>
   <div class="project-image">
-    <img src="https://github.com/tawsifturjo/tawsifturjo.github.io/blob/master/images/RAS_Enc.png">
+    <img src="images/RAS_Enc.png">
   </div>
 </div>
 
