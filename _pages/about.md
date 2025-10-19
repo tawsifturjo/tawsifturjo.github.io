@@ -28,8 +28,9 @@ redirect_from:
   }
   
   .project-text {
-    flex: 1 1 60%;
+    flex: 1 1 70%;
     min-width: 300px;
+    order: 1;
   }
   
   .project-text h4 {
@@ -47,9 +48,11 @@ redirect_from:
   }
   
   .project-image {
-    flex: 1 1 35%;
-    max-width: 350px;
-    min-width: 250px;
+    flex: 0 0 25%;
+    max-width: 250px;
+    min-width: 200px;
+    order: 2;
+    align-self: center;
   }
   
   .project-image img {
@@ -122,9 +125,16 @@ redirect_from:
       padding: 1.5em;
     }
     
-    .project-text, .project-image {
+    .project-text {
+      flex: 1 1 100%;
+      order: 2;
+    }
+    
+    .project-image {
       flex: 1 1 100%;
       max-width: 100%;
+      order: 1;
+      margin-bottom: 1em;
     }
   }
 </style>
@@ -153,8 +163,7 @@ redirect_from:
     </div>
   </div>
   <div class="project-image">
-    <img src="/images/RAS_Enc.png">
-    
+    <img src="images/site-logo.png" alt="EEG Memory Encoding and Retrieval Research">
   </div>
 </div>
 
@@ -182,4 +191,3 @@ redirect_from:
 </div>
 
 ---
-
