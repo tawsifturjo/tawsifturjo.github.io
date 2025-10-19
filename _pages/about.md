@@ -63,7 +63,7 @@ redirect_from:
     <p>
       In this study, I applied quantum-inspired metaheuristics to optimize EEG signal denoising using FIR filters. The method preserved critical neural patterns while reducing artifact-induced noise. Techniques from compressed sensing and non-convex optimization were combined with domain knowledge in neurophysiology. This research bridges classical signal processing with principles from quantum computing and optimization.
     </p>
-    <a class="project-link" href="https://example.com/quantum-eeg-denoising" target="_blank">🔗 Read the Paper</a>
+    <a class="project-link"https://doi.org/10.1109/ECCE64574.2025.11013815">🔗 Read the Paper</a>
   </div>
   <div class="project-image">
     <img src="/assets/images/project2-quantum.jpg" alt="Quantum Optimization in EEG">
