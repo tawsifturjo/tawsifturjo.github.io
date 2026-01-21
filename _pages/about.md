@@ -1,11 +1,9 @@
 ---
-layout: single
-title: "About Me"
-permalink: /about/
-author_profile: true
+layout: single 
+permalink: /
 ---
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8" />
