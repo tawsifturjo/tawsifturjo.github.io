@@ -5,12 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
----
-layout: single
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
 
 <!-- Styles & Theme Logic -->
 <style>
