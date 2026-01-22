@@ -307,7 +307,7 @@ author_profile: true
         </div>
         <div class="pub-image-wrapper">
           <!-- Path pointing to your GitHub 'images' folder -->
-          <img src="/images/decoding_memory_thumbnail.jpg" alt="Publication Preview" onerror="this.src='https://via.placeholder.com/170?text=Research'">
+          <img src="images/favicon-512x512.png" alt="Publication Preview" onerror="this.src='https://via.placeholder.com/170?text=Research'">
         </div>
       </article>
 
