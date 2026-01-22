@@ -4,15 +4,28 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - Mohammed Tawshif Hossain</title>
+  <title>Research Portfolio | Mohammed Tawshif Hossain</title>
   <style>
+    /* Base Variables for Theme Consistency */
+    :root {
+      --bg-dark: #0f1115;
+      --card-bg-dark: #1a1d23;
+      --text-main-dark: #e4e4e4;
+      --text-muted-dark: #9da3ae;
+      --accent: #6366f1;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      
+      --bg-light: #f8fafc;
+      --card-bg-light: #ffffff;
+      --text-main-light: #1e293b;
+      --text-muted-light: #64748b;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -20,752 +33,400 @@ author_profile: true
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: #1a1a1a;
-      color: #e4e4e4;
-      padding: 0;
-      min-height: 100vh;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main-dark);
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     body.light-mode {
-      background: #f5f5f5;
-      color: #2c3e50;
+      background: var(--bg-light);
+      color: var(--text-main-light);
     }
 
-    /* Navigation Bar */
+    /* Minimalist Navigation Bar */
     .navbar {
-      background: #2b2b2b;
-      padding: 0;
-      border-bottom: 1px solid #3a3a3a;
+      background: rgba(15, 17, 21, 0.8);
+      backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
     }
 
     body.light-mode .navbar {
-      background: #ffffff;
-      border-bottom: 1px solid #e0e0e0;
+      background: rgba(248, 250, 252, 0.8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-container {
-      max-width: 1200px;
+      max-width: 1000px; /* Aligned with content width */
       margin: 0 auto;
       display: flex;
+      justify-content: flex-end; /* Pushes links to the right */
       align-items: center;
-      justify-content: space-between;
       padding: 0 20px;
-    }
-
-    .nav-brand {
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 20px 0;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .nav-brand {
-      color: #2c3e50;
-    }
-
-    .nav-brand:hover {
-      color: #667eea;
     }
 
     .nav-links {
       display: flex;
-      gap: 0;
       list-style: none;
       align-items: center;
     }
 
-    .nav-links li {
-      margin: 0;
-    }
-
     .nav-links a {
-      display: block;
-      padding: 20px 24px;
-      color: #b8b8b8;
+      color: var(--text-muted-dark);
       text-decoration: none;
+      font-size: 0.9rem;
       font-weight: 500;
-      transition: all 0.3s ease;
-      border-bottom: 3px solid transparent;
+      padding: 20px 15px;
+      transition: color 0.3s ease;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     body.light-mode .nav-links a {
-      color: #5a5a5a;
+      color: var(--text-muted-light);
     }
 
-    .nav-links a:hover {
-      color: #ffffff;
-      background: #333333;
-      border-bottom-color: #667eea;
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
     }
 
-    body.light-mode .nav-links a:hover {
-      color: #2c3e50;
-      background: #f0f0f0;
-    }
-
-    .nav-links a.active {
-      color: #ffffff;
-      border-bottom-color: #667eea;
-    }
-
-    body.light-mode .nav-links a.active {
-      color: #2c3e50;
-    }
-
-    .theme-toggle {
+    .theme-toggle-btn {
       background: none;
       border: none;
-      color: #b8b8b8;
-      font-size: 1.5em;
       cursor: pointer;
-      padding: 20px 20px;
-      transition: color 0.3s ease, transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 1.1rem;
+      padding: 10px;
+      margin-left: 10px;
+      color: var(--text-muted-dark);
+      transition: transform 0.3s ease;
     }
 
-    body.light-mode .theme-toggle {
-      color: #5a5a5a;
+    body.light-mode .theme-toggle-btn {
+      color: var(--text-muted-light);
     }
 
-    .theme-toggle:hover {
-      color: #667eea;
-      transform: scale(1.1);
+    .theme-toggle-btn:hover {
+      transform: rotate(15deg);
     }
 
-    /* Breadcrumb */
-    .breadcrumb {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px 20px 10px 20px;
-      font-size: 0.9em;
-      color: #888;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .breadcrumb {
-      color: #666;
-    }
-
-    .breadcrumb a {
-      color: #667eea;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .breadcrumb a {
-      color: #667eea;
-    }
-
-    .breadcrumb a:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
-
-    .breadcrumb span {
-      margin: 0 8px;
-    }
-
+    /* Main Container */
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 20px 20px 40px 20px;
+      padding: 40px 20px;
     }
 
-    /* Header Section */
+    /* Page Header Section */
     .page-header {
-      text-align: left;
-      margin-bottom: 50px;
-      padding: 30px;
-      background: #2b2b2b;
-      border-radius: 12px;
-      border: 1px solid #3a3a3a;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s ease, border-color 0.3s ease;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    body.light-mode .page-header {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-    }
-
-    .page-header::before {
-      display: none;
-    }
-
-    .header-content {
-      flex: 1;
+      margin-bottom: 60px;
+      border-left: 4px solid var(--accent);
+      padding-left: 25px;
     }
 
     .page-header h1 {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #8b9cff;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       margin-bottom: 8px;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .page-header h1 {
-      color: #667eea;
-    }
-
-    .page-header h1::before {
-      content: '📚';
-      margin-right: 12px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .page-header p {
-      font-size: 1em;
-      color: #b8b8b8;
-      position: relative;
-      transition: color 0.3s ease;
+      color: var(--text-muted-dark);
+      font-size: 1.1rem;
     }
 
     body.light-mode .page-header p {
-      color: #5a5a5a;
-    }
-
-    .header-toggle {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #b8b8b8;
-      font-size: 0.9em;
-      cursor: pointer;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    body.light-mode .header-toggle {
-      color: #5a5a5a;
-      background: #f5f5f5;
-      border: 1px solid #e0e0e0;
-    }
-
-    .header-toggle:hover {
-      background: rgba(102, 126, 234, 0.2);
-      border-color: rgba(102, 126, 234, 0.4);
-    }
-
-    body.light-mode .header-toggle:hover {
-      background: #e8ebff;
-      border-color: #667eea;
-    }
-
-    .toggle-icon {
-      font-size: 1.3em;
+      color: var(--text-muted-light);
     }
 
     /* Year Divider */
     .year-section {
-      margin: 50px 0 30px 0;
+      margin-top: 40px;
     }
 
     .year-divider {
-      font-size: 2em;
+      font-size: 1.8rem;
       font-weight: 700;
-      color: #667eea;
-      padding-bottom: 12px;
-      border-bottom: 3px solid rgba(102, 126, 234, 0.4);
-      display: inline-block;
+      color: var(--text-main-dark);
       margin-bottom: 30px;
-      transition: color 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     body.light-mode .year-divider {
-      color: #667eea;
-      border-bottom-color: rgba(102, 126, 234, 0.6);
+      color: var(--text-main-light);
     }
 
-    /* Publication Card */
+    .year-divider::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    body.light-mode .year-divider::after {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Publication Card Styles */
     .publication-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 28px;
+      background: var(--card-bg-dark);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 30px;
       margin-bottom: 24px;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     body.light-mode .publication-card {
-      background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .publication-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-      transform: scaleY(0);
-      transition: transform 0.4s ease;
+      background: var(--card-bg-light);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
     .publication-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
-      border-color: rgba(102, 126, 234, 0.3);
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
     }
 
-    body.light-mode .publication-card:hover {
-      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
-      border-color: rgba(102, 126, 234, 0.4);
-    }
-
-    .publication-card:hover::before {
-      transform: scaleY(1);
-    }
-
-    /* Badge */
     .pub-badge {
       display: inline-block;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.75em;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 16px;
-    }
-
-    .journal-badge {
-      background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-      color: white;
-    }
-
-    .conference-badge {
-      background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
-      color: white;
-    }
-
-    /* Title */
-    .pub-title {
-      font-size: 1.3em;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.7rem;
       font-weight: 700;
-      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent);
+    }
+
+    .pub-title {
+      font-size: 1.4rem;
+      font-weight: 700;
       margin-bottom: 12px;
-      line-height: 1.4;
-      transition: color 0.3s ease;
+      color: var(--text-main-dark);
+      line-height: 1.3;
     }
 
     body.light-mode .pub-title {
-      color: #2c3e50;
+      color: var(--text-main-light);
     }
 
-    .publication-card:hover .pub-title {
-      color: #667eea;
-    }
-
-    /* Authors */
     .pub-authors {
-      font-size: 0.95em;
-      color: #a8a8a8;
+      color: var(--text-muted-dark);
+      font-size: 0.95rem;
       margin-bottom: 8px;
-      font-style: italic;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .pub-authors {
-      color: #666;
     }
 
     .pub-authors strong {
-      color: #d4d4d4;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: var(--text-main-dark);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
     }
 
     body.light-mode .pub-authors strong {
-      color: #2c3e50;
+      color: var(--text-main-light);
     }
 
-    /* Venue */
     .pub-venue {
-      font-size: 0.9em;
-      color: #888;
-      margin-bottom: 16px;
+      font-size: 0.9rem;
+      color: var(--accent);
       font-weight: 500;
-      transition: color 0.3s ease;
+      margin-bottom: 15px;
     }
 
-    body.light-mode .pub-venue {
-      color: #555;
-    }
-
-    .pub-venue em {
-      color: #9a9a9a;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .pub-venue em {
-      color: #666;
-    }
-
-    /* Abstract */
     .pub-abstract {
-      font-size: 0.92em;
-      line-height: 1.7;
-      color: #b0b0b0;
-      margin-bottom: 18px;
-      text-align: justify;
-      transition: color 0.3s ease;
+      font-size: 0.95rem;
+      color: var(--text-muted-dark);
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: -webkit-line-clamp 0.3s ease;
+    }
+
+    .publication-card:hover .pub-abstract {
+      -webkit-line-clamp: 10;
     }
 
     body.light-mode .pub-abstract {
-      color: #4a4a4a;
+      color: var(--text-muted-light);
     }
 
-    .pub-abstract strong {
-      color: #667eea;
-      font-weight: 600;
-    }
-
-    /* Links Section */
+    /* Links and Buttons */
     .pub-links {
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
+      gap: 12px;
     }
 
-    .pub-link {
+    .pub-btn {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 0.85em;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
+      transition: all 0.2s ease;
     }
 
-    .pub-link.doi {
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    .btn-primary {
+      background: var(--accent);
       color: white;
     }
 
-    .pub-link.pdf {
-      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-      color: white;
+    .btn-primary:hover {
+      background: #4f46e5;
+      transform: scale(1.02);
     }
 
-    .pub-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted-dark);
     }
 
-    /* Metrics */
-    .pub-metrics {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      transition: border-color 0.3s ease;
-    }
-
-    body.light-mode .pub-metrics {
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .metric {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.85em;
-      color: #a0a0a0;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .metric {
-      color: #666;
-    }
-
-    .metric strong {
-      color: #d0d0d0;
-      transition: color 0.3s ease;
-    }
-
-    body.light-mode .metric strong {
-      color: #2c3e50;
-    }
-
-    /* Footer Section */
-    .scholar-section {
-      text-align: center;
-      margin-top: 60px;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s ease;
-    }
-
-    body.light-mode .scholar-section {
-      background: #ffffff;
+    body.light-mode .btn-outline {
       border: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      color: var(--text-muted-light);
     }
 
-    .scholar-section p {
-      font-size: 1.05em;
-      color: #b8b8b8;
-      transition: color 0.3s ease;
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main-dark);
     }
 
-    body.light-mode .scholar-section p {
-      color: #5a5a5a;
+    /* Scholar Footer */
+    .scholar-footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .scholar-section a {
-      color: #667eea;
-      font-weight: 600;
+    body.light-mode .scholar-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .scholar-footer a {
+      color: var(--accent);
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-weight: 600;
     }
 
-    .scholar-section a:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-      }
-
-      .nav-links li {
-        width: 100%;
-      }
-
-      .nav-links a {
-        padding: 15px 20px;
-        border-bottom: 1px solid #3a3a3a;
-      }
-
-      .page-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      .header-toggle {
-        align-self: flex-end;
-      }
-
-      .page-header h1 {
-        font-size: 1.8em;
-      }
-
-      .page-header {
-        padding: 25px 20px;
-      }
-
-      .publication-card {
-        padding: 20px;
-      }
-
-      .pub-title {
-        font-size: 1.15em;
-      }
-
-      .year-divider {
-        font-size: 1.6em;
-      }
+      .page-header h1 { font-size: 2rem; }
+      .nav-container { justify-content: center; }
+      .nav-links a { padding: 15px 10px; font-size: 0.8rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Minimal Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-brand">Mohammed Tawshif Hossain</a>
       <ul class="nav-links">
-        <li><a href="#" class="active">Publications</a></li>
+        <li><a href="#" class="active">Research</a></li>
         <li><a href="#">CV</a></li>
-        <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeIcon">
+            🌙
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <a href="#">Home</a>
-    <span>/</span>
-    <span>Publications</span>
-  </div>
-
   <div class="container">
     <!-- Header -->
-    <div class="page-header">
-      <div class="header-content">
-        <h1>Research Publications</h1>
-        <p>Selected works in Neuroscience & AI</p>
-      </div>
-      <div class="header-toggle" onclick="toggleTheme()">
-        <span class="toggle-icon">🌙</span>
-        <span class="toggle-text">Light Mode</span>
-      </div>
-    </div>
+    <header class="page-header">
+      <h1>Selected Publications</h1>
+      <p>Advancing Neuroscience through Machine Learning and Signal Processing</p>
+    </header>
 
-    <!-- 2025 Publications -->
-    <div class="year-section">
+    <!-- 2025 Section -->
+    <section class="year-section">
       <div class="year-divider">2025</div>
 
-      <!-- Publication 1 -->
-      <div class="publication-card">
-        <span class="pub-badge journal-badge">📄 Journal Article</span>
-        
+      <!-- Item 1 -->
+      <article class="publication-card">
+        <span class="pub-badge">Journal Article</span>
         <h2 class="pub-title">Decoding Memory with Explainable AI: A Large-Scale EEG-Based Machine Learning Study of Encoding vs. Retrieval</h2>
-        
         <p class="pub-authors">
           <strong>Mohammed Tawshif Hossain</strong>, et al.
         </p>
-        
-        <p class="pub-venue">
-          <em>Neuroscience Informatics</em>, 2025
-        </p>
-        
+        <p class="pub-venue">Neuroscience Informatics, 2025</p>
         <p class="pub-abstract">
-          Understanding the distinct neural signatures that differentiate memory encoding from retrieval remains a key challenge in cognitive neuroscience. This study applies machine learning to EEG data from the Penn Electrophysiology of Encoding and Retrieval Study (PEERS), involving 100 participants across over 400 sessions, to classify these cognitive states. We used Discrete Wavelet Transform (DWT) on EEG signals from six critical brain regions and evaluated seven machine learning models. Gradient Boosting emerged as the most effective classifier, achieving <strong>81.97% accuracy</strong> and a <strong>91.62% AUC</strong>. To interpret this performance, we applied Explainable AI (XAI) methods, specifically SHapley Additive exPlanations (SHAP). This analysis revealed that theta-band relative energy, especially in the Left and Right Anterior Superior (LAS/RAS) regions, was the most influential predictor.
+          This study applies machine learning to EEG data from the PEERS study to classify memory encoding vs. retrieval. Using DWT and Gradient Boosting, we achieved 81.97% accuracy. SHAP analysis revealed theta-band relative energy as the most influential predictor.
         </p>
-        
         <div class="pub-links">
-          <a class="pub-link doi" href="https://doi.org/10.1016/j.neuri.2025.100227" target="_blank" rel="noopener noreferrer">
-            🔗 DOI
-          </a>
-          <a class="pub-link pdf" href="https://doi.org/10.1016/j.neuri.2025.100227" target="_blank" rel="noopener noreferrer">
-            📄 PDF
-          </a>
+          <a href="https://doi.org/10.1016/j.neuri.2025.100227" class="pub-btn btn-primary" target="_blank">DOI</a>
+          <a href="#" class="pub-btn btn-outline">Full PDF</a>
         </div>
-        
-        <div class="pub-metrics">
-          <span class="metric">
-            📊 <strong>Accuracy:</strong> 81.97%
-          </span>
-          <span class="metric">
-            📈 <strong>AUC:</strong> 91.62%
-          </span>
-        </div>
-      </div>
+      </article>
 
-      <!-- Publication 2 -->
-      <div class="publication-card">
-        <span class="pub-badge conference-badge">🎤 Conference Paper</span>
-        
+      <!-- Item 2 -->
+      <article class="publication-card">
+        <span class="pub-badge">Conference Paper</span>
         <h2 class="pub-title">Spectrogram-Driven Emotion Detection from Electroencephalogram</h2>
-        
         <p class="pub-authors">
           <strong>Mohammed Tawshif Hossain</strong>, et al.
         </p>
-        
-        <p class="pub-venue">
-          <em>2025 International Conference on Electrical, Computer and Communication Engineering (ECCE)</em>
-        </p>
-        
+        <p class="pub-venue">2025 Int. Conf. on Electrical, Computer and Communication Engineering (ECCE)</p>
         <p class="pub-abstract">
-          Emotion detection aims to interpret emotions through data like text, voice, and physiological signals, which holds significant potential for monitoring mental health and human-computer interaction. Electroencephalogram (EEG) is a non-invasive technique recording brain activity and offers unique insights for real-time emotion detection. This study evaluates classifying emotions (positive, negative, neutral) in EEG using deep learning, emphasizing Convolutional Neural Networks (CNN). After preprocessing, time-frequency representations along with random transformations were created as inputs to the CNN architecture using short-time Fourier transform of EEG signals from the SEED dataset. The spectrograms were processed to achieve better outcomes, showing an overall accuracy of <strong>99.80%</strong> in detecting emotion classes.
+          Evaluates classifying emotions (positive, negative, neutral) in EEG using CNNs. Utilizing STFT-generated spectrograms from the SEED dataset, the model achieved an accuracy of 99.80%.
         </p>
-        
         <div class="pub-links">
-          <a class="pub-link doi" href="https://doi.org/10.1109/ECCE64574.2025.11013815" target="_blank" rel="noopener noreferrer">
-            🔗 DOI
-          </a>
-          <a class="pub-link pdf" href="https://doi.org/10.1109/ECCE64574.2025.11013815" target="_blank" rel="noopener noreferrer">
-            📄 PDF
-          </a>
+          <a href="https://doi.org/10.1109/ECCE64574.2025.11013815" class="pub-btn btn-primary" target="_blank">DOI</a>
+          <a href="#" class="pub-btn btn-outline">Presentation</a>
         </div>
-        
-        <div class="pub-metrics">
-          <span class="metric">
-            📊 <strong>Accuracy:</strong> 99.80%
-          </span>
-          <span class="metric">
-            🧠 <strong>Dataset:</strong> SEED
-          </span>
-        </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <!-- Google Scholar Section -->
-    <div class="scholar-section">
-      <p>
-        For a complete list of publications and citation metrics, please visit my 
-        <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.
-      </p>
-    </div>
+    <!-- Footer -->
+    <footer class="scholar-footer">
+      <p>View more on <a href="https://scholar.google.com/citations?user=BHDeP0gAAAAJ" target="_blank">Google Scholar</a></p>
+    </footer>
   </div>
 
   <script>
-    // Theme toggle functionality
     function toggleTheme() {
       const body = document.body;
-      const themeToggle = document.querySelector('.toggle-icon');
-      const toggleText = document.querySelector('.toggle-text');
-      
+      const icon = document.getElementById('themeIcon');
       body.classList.toggle('light-mode');
       
-      // Update button icon and text
       if (body.classList.contains('light-mode')) {
-        themeToggle.textContent = '☀️';
-        toggleText.textContent = 'Dark Mode';
+        icon.textContent = '☀️';
         localStorage.setItem('theme', 'light');
       } else {
-        themeToggle.textContent = '🌙';
-        toggleText.textContent = 'Light Mode';
+        icon.textContent = '🌙';
         localStorage.setItem('theme', 'dark');
       }
     }
 
-    // Load saved theme on page load
-    window.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme
+    window.onload = () => {
       const savedTheme = localStorage.getItem('theme');
-      const body = document.body;
-      const themeToggle = document.querySelector('.toggle-icon');
-      const toggleText = document.querySelector('.toggle-text');
-      
       if (savedTheme === 'light') {
-        body.classList.add('light-mode');
-        themeToggle.textContent = '☀️';
-        toggleText.textContent = 'Dark Mode';
+        document.body.classList.add('light-mode');
+        document.getElementById('themeIcon').textContent = '☀️';
       }
-    });
+    };
   </script>
 </body>
 </html>
