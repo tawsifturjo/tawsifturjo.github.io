@@ -1,11 +1,10 @@
 ---
 layout: single
-title: "Publications"
+
 permalink: /publications/
 author_profile: true
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -307,7 +306,7 @@ author_profile: true
         </div>
         <div class="pub-image-wrapper">
           <!-- Path pointing to your GitHub 'images' folder -->
-          <img src="images/favicon-512x512.png" alt="Publication Preview" onerror="this.src='https://via.placeholder.com/170?text=Research'">
+          <img src="/images/favicon-512x512.png" alt="Publication Preview" onerror="this.src='https://via.placeholder.com/170?text=Research'">
         </div>
       </article>
 
