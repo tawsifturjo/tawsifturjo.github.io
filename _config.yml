@@ -16,7 +16,7 @@ repository               : "tawsifturjo/tawsifturjo.github.io"
 # -----------------------
 # Visual & Theme Settings
 # -----------------------
-site_theme               : "aqua"
+site_theme               : "contrast"
 # The 'contrast' skin provides a classic high-contrast black & white academic look.
 # Options: "default", "air", "aqua", "contrast", "dark", "dirt", "mint", "neon", "plum", "sunrise"
 minimal_mistakes_skin    : "contrast" 
@@ -57,9 +57,9 @@ publication_category:
 # Site Functionality
 # -----------------------
 teaser                   : # filename of fallback teaser image in /images/
-breadcrumbs              : true # Enabled for classic hierarchical navigation
+breadcrumbs              : true# Enabled for classic hierarchical navigation
 words_per_minute         : 200
-future                   : true
+future                   : false
 read_more                : "enabled" # Adds "Read more" links for a cleaner index page
 talkmap_link             : true      # Great for showing global conference attendance
 
