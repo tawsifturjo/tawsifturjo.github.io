@@ -301,7 +301,7 @@ author_profile: true
             <a href="https://doi.org/10.1016/j.neuri.2025.100227" class="pub-btn btn-doi" target="_blank">DOI</a>
             <!-- Paths pointing to your GitHub 'files' folder -->
             <a href="/files/decoding_memory_full.pdf" class="pub-btn btn-pdf">Full PDF</a>
-            <a href="/files/decoding_memory_slides.pdf" class="pub-btn btn-slide">Presentation Slide</a>
+            <a href="/files/slides2.pdf" class="pub-btn btn-slide">Presentation Slide</a>
           </div>
         </div>
         <div class="pub-image-wrapper">
