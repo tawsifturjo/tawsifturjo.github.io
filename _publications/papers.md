@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 <style>
-  /* Global Theme Overrides - Force Deep Dark Backgrounds */
+  /* Global Theme Overrides */
   html, body, #main, .page, .page__content {
     background-color: var(--bg-dark) !important;
     transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -19,14 +19,19 @@ author_profile: true
   }
 
   :root {
-    --bg-dark: #0a0a0c;
-    --card-bg-dark: #161618;
-    --card-border-dark: rgba(255, 255, 255, 0.05);
-    --text-main-dark: #f0f0f2;
-    --text-muted-dark: #a1a1aa;
-    --accent: #6366f1;
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    --card-glow: rgba(99, 102, 241, 0.25);
+    /* Vibrant Dark Academia Theme - Matching Home Page */
+    --bg-dark: #0a0a0a;
+    --card-bg-dark: rgba(30, 30, 35, 0.8);
+    --card-border-dark: rgba(255, 255, 255, 0.12);
+    --text-main-dark: #ffffff;
+    --text-muted-dark: #b8b8b8;
+    --text-tertiary-dark: #777777;
+    
+    --accent: #ffd700; /* Vibrant Gold */
+    --accent-glow: rgba(255, 215, 0, 0.3);
+    --accent-dim: rgba(255, 215, 0, 0.15);
+    --accent-gradient: linear-gradient(135deg, #ffffff, #ffd700);
+    --border-accent: rgba(255, 215, 0, 0.5);
     
     --bg-light: #fdfdfd;
     --card-bg-light: #ffffff;
@@ -35,33 +40,67 @@ author_profile: true
     --text-muted-light: #71717a;
   }
 
-  /* Remove Jekyll Metadata Gaps */
+  /* Remove Jekyll Metadata */
   .page__title, .page__meta, .page__hero, .nav-links { display: none !important; }
   #main { padding-top: 0 !important; }
   .page { margin-top: 0 !important; }
   .page__content { padding-top: 0 !important; }
 
-  /* Main Wrapper - Compact Start */
+  /* Main Wrapper */
   .pub-wrapper {
     font-family: 'Inter', -apple-system, sans-serif;
     color: var(--text-main-dark);
     margin-top: -40px;
-    background: transparent;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.02) 0%, transparent 50%);
   }
 
   body.light-mode .pub-wrapper {
     color: var(--text-main-light);
+    background-image: none;
   }
 
-  /* Discrete Theme Toggle (Right Corner) */
-  .theme-bar {
+  /* Top Header Bar */
+  .top-header-bar {
     display: flex;
-    justify-content: flex-end;
-    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
   }
 
+  /* Header Styling */
+  .compact-header {
+    margin-bottom: 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 25px;
+  }
+
+  .compact-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: none !important;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .compact-header p {
+    color: var(--text-tertiary-dark);
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  body.light-mode .compact-header p { color: var(--text-muted-light); }
+
+  /* Theme Toggle Button */
   .theme-toggle-btn {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(20, 20, 20, 0.6);
     border: 1px solid var(--card-border-dark);
     cursor: pointer;
     font-size: 1.1rem;
@@ -72,7 +111,8 @@ author_profile: true
     align-items: center;
     justify-content: center;
     color: var(--text-main-dark);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
@@ -84,66 +124,66 @@ author_profile: true
   }
 
   .theme-toggle-btn:hover {
-    transform: scale(1.15) rotate(10deg);
+    transform: scale(1.15);
     border-color: var(--accent);
-    box-shadow: 0 0 20px var(--card-glow);
+    box-shadow: 0 0 20px var(--accent-glow);
   }
 
-  /* Compact Header */
-  .compact-header {
-    margin-bottom: 30px;
-    border-left: 4px solid var(--accent);
-    padding-left: 20px;
-  }
-
-  .compact-header h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    margin: 0;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: none !important;
-  }
-
-  .compact-header p {
-    color: var(--text-muted-dark);
-    font-size: 0.95rem;
-    margin: 4px 0 0 0;
-  }
-
-  body.light-mode .compact-header p { color: var(--text-muted-light); }
-
-  /* Lively Publication Card Slot */
+  /* Publication Cards */
   .publication-card {
     background: var(--card-bg-dark);
     border: 1px solid var(--card-border-dark);
-    border-radius: 18px;
+    border-radius: 8px;
     padding: 24px;
     margin-bottom: 24px;
     display: flex;
     gap: 28px;
     align-items: center;
     position: relative;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Livelier "vibration" motion */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .publication-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   body.light-mode .publication-card {
     background: var(--card-bg-light);
     border: 1px solid var(--card-border-light);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
 
   .publication-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--card-glow);
+    transform: translateY(-8px);
+    border-color: var(--border-accent);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
   }
 
-  .pub-content { flex: 1; position: relative; z-index: 1; }
+  .publication-card:hover::before {
+    opacity: 1;
+  }
 
-  /* Square Image Wrapper */
+  body.light-mode .publication-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  }
+
+  .pub-content { 
+    flex: 1; 
+    position: relative; 
+    z-index: 1; 
+  }
+
+  /* Image Wrapper */
   .pub-image-wrapper {
     flex-shrink: 0;
     width: 140px;
@@ -153,6 +193,11 @@ author_profile: true
     border: 1px solid var(--card-border-dark);
     background: #000;
     transition: all 0.4s ease;
+  }
+
+  body.light-mode .pub-image-wrapper {
+    border-color: var(--card-border-light);
+    background: #f4f4f5;
   }
 
   .publication-card:hover .pub-image-wrapper {
@@ -166,7 +211,7 @@ author_profile: true
     height: 100%;
     object-fit: cover;
     opacity: 0.85;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
   }
 
   .publication-card:hover .pub-image-wrapper img {
@@ -174,44 +219,51 @@ author_profile: true
     transform: scale(1.1);
   }
 
+  /* Badge */
   .pub-badge {
     display: inline-block;
     padding: 3px 10px;
     border-radius: 6px;
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     margin-bottom: 10px;
-    background: rgba(99, 102, 241, 0.15);
-    color: #a5b4fc;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--border-accent);
   }
 
+  /* Title */
   .pub-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: var(--text-main-dark);
     line-height: 1.35;
+    font-family: 'Playfair Display', serif;
   }
 
   body.light-mode .pub-title { color: var(--text-main-light); }
 
+  /* Authors */
   .pub-authors {
     color: var(--text-muted-dark);
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     margin-bottom: 18px;
   }
 
   .pub-authors strong {
     color: var(--text-main-dark);
     font-weight: 600;
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
   }
 
+  body.light-mode .pub-authors { color: var(--text-muted-light); }
   body.light-mode .pub-authors strong { color: var(--text-main-light); }
 
-  /* Action Buttons Group */
+  /* Action Buttons */
   .pub-links {
     display: flex;
     gap: 10px;
@@ -220,9 +272,9 @@ author_profile: true
 
   .pub-btn {
     text-decoration: none !important;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    padding: 8px 14px;
+    padding: 9px 16px;
     border-radius: 8px;
     display: inline-flex;
     align-items: center;
@@ -233,9 +285,9 @@ author_profile: true
     color: white !important;
   }
 
-  .btn-doi { background: #3b82f6; }   /* Blue */
-  .btn-pdf { background: #ef4444; }   /* Red */
-  .btn-slide { background: #8b5cf6; } /* Purple */
+  .btn-doi { background: #3b82f6; }
+  .btn-pdf { background: #ef4444; }
+  .btn-slide { background: #8b5cf6; }
 
   .pub-btn:hover {
     filter: brightness(1.2);
@@ -243,24 +295,41 @@ author_profile: true
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
+  /* Responsive */
   @media (max-width: 768px) {
-    .publication-card { flex-direction: column-reverse; padding: 22px; gap: 20px; text-align: left; }
-    .pub-image-wrapper { width: 100%; height: 160px; }
-    .compact-header h1 { font-size: 1.8rem; }
-    .theme-bar { padding: 10px 0; }
+    .publication-card { 
+      flex-direction: column-reverse; 
+      padding: 20px; 
+      gap: 20px; 
+      text-align: left; 
+    }
+    .pub-image-wrapper { 
+      width: 100%; 
+      height: 180px; 
+    }
+    .compact-header h1 { 
+      font-size: 2rem; 
+    }
+    .top-header-bar { 
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 15px; 
+    }
+    .theme-toggle-btn { 
+      align-self: flex-end; 
+    }
   }
 </style>
 
 <div class="pub-wrapper">
-  <!-- Top Theme Toggle Only -->
-  <div class="theme-bar">
+  <!-- Top Header Bar -->
+  <div class="top-header-bar">
+    <header class="compact-header">
+      <h1>Selected Publications</h1>
+      <p>CUET Researcher | ML, Signal Processing & Neuroscience</p>
+    </header>
     <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeIcon" title="Toggle Theme">🌙</button>
   </div>
-
-  <header class="compact-header">
-    <h1>Selected Publications</h1>
-    <p>Researcher at CUET | ML, Signal Processing & Neuroscience</p>
-  </header>
 
   <!-- Paper 1 -->
   <article class="publication-card">
@@ -272,15 +341,14 @@ author_profile: true
       </p>
       
       <div class="pub-links">
+        <!-- Update these links with your actual file paths -->
         <a href="https://doi.org/10.1016/j.neuri.2025.100227" class="pub-btn btn-doi" target="_blank">DOI</a>
-        <!-- Pulling PDF from your /files/ directory -->
         <a href="/files/decoding_memory_full.pdf" class="pub-btn btn-pdf" target="_blank">Full PDF</a>
-        <!-- Pulling Slide from your /files/ directory -->
-        <a href="/files/slides2.pdf" class="pub-btn btn-slide" target="_blank">Presentation Slide</a>
+        <a href="/files/slides2.pdf" class="pub-btn btn-slide" target="_blank">Slides</a>
       </div>
     </div>
     <div class="pub-image-wrapper">
-      <!-- Pulling Image from your /images/ directory -->
+      <!-- Update image path as needed -->
       <img src="/images/favicon-512x512.png" alt="Paper Visual" onerror="this.src='https://via.placeholder.com/140?text=Research'">
     </div>
   </article>
@@ -295,15 +363,14 @@ author_profile: true
       </p>
       
       <div class="pub-links">
+        <!-- Update these links with your actual file paths -->
         <a href="https://doi.org/10.1109/ECCE64574.2025.11013815" class="pub-btn btn-doi" target="_blank">DOI</a>
-        <!-- Pulling PDF from your /files/ directory -->
         <a href="/files/emotion_detection_full.pdf" class="pub-btn btn-pdf" target="_blank">Full PDF</a>
-        <!-- Pulling Slide from your /files/ directory -->
-        <a href="/files/emotion_detection_slides.pdf" class="pub-btn btn-slide" target="_blank">Presentation Slide</a>
+        <a href="/files/emotion_detection_slides.pdf" class="pub-btn btn-slide" target="_blank">Slides</a>
       </div>
     </div>
     <div class="pub-image-wrapper">
-      <!-- Pulling Image from your /images/ directory -->
+      <!-- Update image path as needed -->
       <img src="/images/emotion_detection_thumbnail.jpg" alt="Paper Visual" onerror="this.src='https://via.placeholder.com/140?text=Research'">
     </div>
   </article>
