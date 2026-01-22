@@ -5,9 +5,26 @@ layout: single
 permalink: /publications/
 author_profile: true
 ---
+---
+layout: single
+permalink: /publications/
+author_profile: true
+---
 
 <style>
-  /* Root Theme Variables */
+  /* Global Theme Overrides - Force Backgrounds */
+  html, body, #main, .page, .page__content {
+    background-color: var(--bg-dark) !important;
+    transition: background-color 0.3s ease;
+  }
+
+  body.light-mode, 
+  body.light-mode #main, 
+  body.light-mode .page, 
+  body.light-mode .page__content {
+    background-color: var(--bg-light) !important;
+  }
+
   :root {
     --bg-dark: #0a0a0c;
     --card-bg-dark: #161618;
@@ -16,6 +33,7 @@ author_profile: true
     --text-muted-dark: #a1a1aa;
     --accent: #6366f1;
     --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --card-glow: rgba(99, 102, 241, 0.2);
     
     --bg-light: #fdfdfd;
     --card-bg-light: #ffffff;
@@ -26,7 +44,7 @@ author_profile: true
 
   /* Force Remove Jekyll Theme Headers & Gaps */
   .page__title, .page__meta, .page__hero { display: none !important; }
-  #main { padding-top: 0 !important; background: transparent !important; }
+  #main { padding-top: 0 !important; }
   .page { margin-top: 0 !important; }
   .page__content { padding-top: 0 !important; }
   .archive { margin-top: 0 !important; }
@@ -36,22 +54,20 @@ author_profile: true
     font-family: 'Inter', -apple-system, sans-serif;
     color: var(--text-main-dark);
     transition: all 0.3s ease;
-    margin-top: 0;
-    background: var(--bg-dark);
+    margin-top: -20px;
+    background: transparent;
   }
 
   body.light-mode .pub-wrapper {
     color: var(--text-main-light);
-    background: var(--bg-light);
   }
 
-  /* Top Header Bar - UPDATED */
-  .top-header-bar {
+  /* Compact Theme Bar */
+  .theme-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    margin-bottom: 40px;
+    justify-content: flex-end;
+    padding: 15px 0;
+    margin-bottom: 5px;
   }
 
   .theme-toggle-btn {
@@ -66,27 +82,34 @@ author_profile: true
     align-items: center;
     justify-content: center;
     color: var(--text-main-dark);
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
 
   body.light-mode .theme-toggle-btn {
     background: #f4f4f5;
     border-color: var(--card-border-light);
     color: var(--text-main-light);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
 
   .theme-toggle-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(15deg);
     border-color: var(--accent);
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 20px var(--card-glow);
   }
 
   /* Compact Header */
   .compact-header {
-    margin-bottom: 0;
+    margin-bottom: 35px;
     border-left: 4px solid var(--accent);
     padding-left: 20px;
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
   }
 
   .compact-header h1 {
@@ -109,70 +132,84 @@ author_profile: true
 
   body.light-mode .compact-header p { color: var(--text-muted-light); }
 
-  /* Publication Card */
+  /* Publication Card - VIBRANT DESIGN */
   .publication-card {
     background: var(--card-bg-dark);
     border: 1px solid var(--card-border-dark);
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 24px;
+    border-radius: 20px;
+    padding: 26px;
+    margin-bottom: 26px;
     display: flex;
-    gap: 28px;
+    gap: 32px;
     align-items: center;
-    transition: all 0.3s ease;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
   }
 
   body.light-mode .publication-card {
     background: var(--card-bg-light);
     border: 1px solid var(--card-border-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
 
   .publication-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.01);
     border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--card-glow);
   }
 
-  .pub-content { flex: 1; }
+  .pub-content { flex: 1; position: relative; z-index: 1; }
 
+  /* Interactive Image Wrapper */
   .pub-image-wrapper {
     flex-shrink: 0;
-    width: 140px;
-    height: 140px;
-    border-radius: 12px;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
     overflow: hidden;
     border: 1px solid var(--card-border-dark);
     background: #000;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .publication-card:hover .pub-image-wrapper {
+    transform: scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   }
 
   .pub-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
-    transition: opacity 0.3s;
+    opacity: 0.85;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .publication-card:hover .pub-image-wrapper img { opacity: 1; }
+  .publication-card:hover .pub-image-wrapper img {
+    opacity: 1;
+    transform: scale(1.12);
+  }
 
   .pub-badge {
     display: inline-block;
-    padding: 3px 10px;
-    border-radius: 6px;
+    padding: 4px 12px;
+    border-radius: 8px;
     font-size: 0.65rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-    background: rgba(99, 102, 241, 0.12);
-    color: #818cf8;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
   }
 
   .pub-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-main-dark);
     line-height: 1.35;
   }
@@ -181,8 +218,8 @@ author_profile: true
 
   .pub-authors {
     color: var(--text-muted-dark);
-    font-size: 0.92rem;
-    margin-bottom: 18px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 
   .pub-authors strong {
@@ -193,10 +230,10 @@ author_profile: true
 
   body.light-mode .pub-authors strong { color: var(--text-main-light); }
 
-  /* Button Group */
+  /* Button Group with Shimmer */
   .pub-links {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
   }
 
@@ -204,15 +241,17 @@ author_profile: true
     text-decoration: none !important;
     font-size: 0.72rem;
     font-weight: 700;
-    padding: 9px 16px;
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: all 0.2s ease;
+    gap: 8px;
+    transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     color: white !important;
+    position: relative;
+    overflow: hidden;
   }
 
   .btn-doi { background: #2563eb; }
@@ -220,31 +259,28 @@ author_profile: true
   .btn-slide { background: #7c3aed; }
 
   .pub-btn:hover {
-    filter: brightness(1.15);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    filter: brightness(1.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   }
 
   @media (max-width: 768px) {
-    .publication-card { flex-direction: column-reverse; padding: 20px; text-align: left; }
-    .pub-image-wrapper { width: 100%; height: 180px; }
+    .publication-card { flex-direction: column-reverse; padding: 22px; gap: 24px; }
+    .pub-image-wrapper { width: 100%; height: 200px; }
     .compact-header h1 { font-size: 1.8rem; }
-    .top-header-bar { flex-direction: column; align-items: flex-start; gap: 15px; }
-    .theme-toggle-btn { align-self: flex-end; }
   }
 </style>
 
 <div class="pub-wrapper">
-  <!-- Top Header Bar with Title on Left, Toggle on Right -->
-  <div class="top-header-bar">
-    <header class="compact-header">
-      <h1>Selected Publications</h1>
-      <p>CUET Researcher | ML, Signal Processing & Neuroscience</p>
-    </header>
+  <div class="theme-bar">
     <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeIcon" title="Toggle Theme">🌙</button>
   </div>
 
-  <!-- Paper 1 -->
+  <header class="compact-header">
+    <h1>Selected Publications</h1>
+    <p>CUET Researcher | ML, Signal Processing & Neuroscience</p>
+  </header>
+
   <article class="publication-card">
     <div class="pub-content">
       <span class="pub-badge">Journal Article</span>
@@ -260,11 +296,10 @@ author_profile: true
       </div>
     </div>
     <div class="pub-image-wrapper">
-      <img src="/images/favicon-512x512.png" alt="Visual Preview" onerror="this.src='https://via.placeholder.com/150?text=Research'">
+      <img src="/images/favicon-512x512.png" alt="Preview" onerror="this.src='https://via.placeholder.com/150?text=Research'">
     </div>
   </article>
 
-  <!-- Paper 2 -->
   <article class="publication-card">
     <div class="pub-content">
       <span class="pub-badge">Conference Paper</span>
@@ -280,7 +315,7 @@ author_profile: true
       </div>
     </div>
     <div class="pub-image-wrapper">
-      <img src="/images/emotion_detection_thumbnail.jpg" alt="Visual Preview" onerror="this.src='https://via.placeholder.com/150?text=Research'">
+      <img src="/images/emotion_detection_thumbnail.jpg" alt="Preview" onerror="this.src='https://via.placeholder.com/150?text=Research'">
     </div>
   </article>
 </div>
