@@ -5,11 +5,7 @@ layout: single
 permalink: /publications/
 author_profile: true
 ---
----
-layout: single
-permalink: /publications/
-author_profile: true
----
+
 
 <style>
   /* Global Theme Overrides - Force Backgrounds */
