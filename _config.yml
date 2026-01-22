@@ -16,7 +16,7 @@ repository               : "tawsifturjo/tawsifturjo.github.io"
 # -----------------------
 # Visual & Theme Settings
 # -----------------------
-site_theme               : "default"
+site_theme               : "aqua"
 # The 'contrast' skin provides a classic high-contrast black & white academic look.
 # Options: "default", "air", "aqua", "contrast", "dark", "dirt", "mint", "neon", "plum", "sunrise"
 minimal_mistakes_skin    : "contrast" 
