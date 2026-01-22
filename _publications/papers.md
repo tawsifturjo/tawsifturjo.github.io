@@ -1,11 +1,5 @@
 ---
 layout: single
-
-permalink: /publications/
-author_profile: true
----
----
-layout: single
 permalink: /publications/
 author_profile: true
 ---
@@ -40,19 +34,22 @@ author_profile: true
     font-family: 'Inter', -apple-system, sans-serif;
     color: var(--text-main-dark);
     transition: all 0.3s ease;
-    margin-top: -20px;
+    margin-top: 0;
+    background: var(--bg-dark);
   }
 
   body.light-mode .pub-wrapper {
     color: var(--text-main-light);
+    background: var(--bg-light);
   }
 
-  /* Compact Theme Bar */
-  .theme-bar {
+  /* Top Header Bar - UPDATED */
+  .top-header-bar {
     display: flex;
-    justify-content: flex-end;
-    padding: 15px 0;
-    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
   }
 
   .theme-toggle-btn {
@@ -85,7 +82,7 @@ author_profile: true
 
   /* Compact Header */
   .compact-header {
-    margin-bottom: 35px;
+    margin-bottom: 0;
     border-left: 4px solid var(--accent);
     padding-left: 20px;
   }
@@ -230,19 +227,20 @@ author_profile: true
     .publication-card { flex-direction: column-reverse; padding: 20px; text-align: left; }
     .pub-image-wrapper { width: 100%; height: 180px; }
     .compact-header h1 { font-size: 1.8rem; }
+    .top-header-bar { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .theme-toggle-btn { align-self: flex-end; }
   }
 </style>
 
 <div class="pub-wrapper">
-  <!-- Top Toggle -->
-  <div class="theme-bar">
+  <!-- Top Header Bar with Title on Left, Toggle on Right -->
+  <div class="top-header-bar">
+    <header class="compact-header">
+      <h1>Selected Publications</h1>
+      <p>CUET Researcher | ML, Signal Processing & Neuroscience</p>
+    </header>
     <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeIcon" title="Toggle Theme">🌙</button>
   </div>
-
-  <header class="compact-header">
-    <h1>Selected Publications</h1>
-    <p>CUET Researcher | ML, Signal Processing & Neuroscience</p>
-  </header>
 
   <!-- Paper 1 -->
   <article class="publication-card">
